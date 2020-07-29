@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'io.montage.bot.Bot'
+group = 'io.montage.bot'
+version = '1.0.1'
+
+configurations {
+    compile
+}
+
+repositories {
+    jcenter()
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+
+    compile ('net.dv8tion:JDA:4.2.0_182'){
+        transitive = true
+        exclude module: 'opus-java'
+    }
+    compile 'com.github.ROMVoid95:ConfigBuilder:1.0.0'
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+}
+
+jar {
+
+    configurations.compile.each { dep ->
+        from(project.zipTree(dep)) {
+            exclude 'META-INF', 'META-INF/**'
+        }
+    }
+    manifest {
+        attributes(
+                'Main-Class': mainClassName
+        )
+    }
+}
