@@ -21,6 +21,7 @@ public class ConfigTest {
     @Test
     public void getBotToken() {
     	String token =  Config.BOT_TOKEN;
+        // Dummy Bot Token
     	assertEquals("NzM1Mjc4NzQxNTQyMDEwOTkw.Xxd7sA.2mAEtCvlYq8YkaynzsC-VfCPbr8", token);
     }
     
