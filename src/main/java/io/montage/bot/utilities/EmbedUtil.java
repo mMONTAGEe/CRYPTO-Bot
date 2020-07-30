@@ -8,7 +8,7 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.MessageBuilder;
 import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.MessageChannel;
+import net.dv8tion.jda.api.entities.TextChannel;
 
 /**
  * Generates common embed messages.
@@ -116,7 +116,7 @@ public class EmbedUtil {
      * @param messageChannel the channel to send the message in.
      * @param message        the message to send.
      */
-    public static void sendAndDeleteOnGuilds(MessageChannel messageChannel, Message message) {
+    public static void sendAndDeleteOnGuilds(TextChannel messageChannel, Message message) {
         sendAndDeleteOnGuilds(messageChannel, message, defaultDeleteInterval, defaultDeleteIntervalTimeUnit);
     }
 
@@ -128,7 +128,7 @@ public class EmbedUtil {
      * @param deleteInterval         the interval after that the message should be deleted if the channel is on a server.
      * @param deleteIntervalTimeUnit the TimeUnit of deleteInterval.
      */
-    public static void sendAndDeleteOnGuilds(MessageChannel messageChannel, Message message, long deleteInterval, TimeUnit deleteIntervalTimeUnit) {
+    public static void sendAndDeleteOnGuilds(TextChannel messageChannel, Message message, long deleteInterval, TimeUnit deleteIntervalTimeUnit) {
         sendAndDelete(messageChannel, message,
                 // only delete message on servers.
                 messageChannel.getType() == ChannelType.TEXT ? deleteInterval : -1,
@@ -144,7 +144,7 @@ public class EmbedUtil {
      *                               interval is < 0.
      * @param deleteIntervalTimeUnit the TimeUnit of deleteInterval.
      */
-    public static void sendAndDelete(MessageChannel messageChannel, Message message, long deleteInterval, TimeUnit deleteIntervalTimeUnit) {
+    public static void sendAndDelete(TextChannel messageChannel, Message message, long deleteInterval, TimeUnit deleteIntervalTimeUnit) {
         messageChannel.sendMessage(message).queue(deleteInterval < 0
                 // do nothing if interval < 0
                 ? null

@@ -1,7 +1,9 @@
 package io.montage.bot.listeners;
 
+import java.io.File;
 import java.util.Random;
 
+import io.montage.bot.utilities.FileUtil;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.events.guild.member.GuildMemberJoinEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -25,7 +27,10 @@ public class GuildMemberJoin extends ListenerAdapter {
 			"[member] BRUH. Finally you are here!",
 			"Respond fast! are you [member] A good man?"
 		};
+	@Override
 	public void onGuildMemberJoin(GuildMemberJoinEvent event) {
+		FileUtil.createFileIfNotExist(new File("user/" + event.getUser().getId()));
+		FileUtil.writeToFile(new File("user/" + event.getUser().getId()), "1");
 		Random rand = new Random(); 
 		int number = rand.nextInt(messages.length);
 		
@@ -34,9 +39,7 @@ public class GuildMemberJoin extends ListenerAdapter {
 		join.setDescription(messages[number].replace("[member]", event.getMember().getAsMention()));
 		
 		event.getGuild().getDefaultChannel().sendMessage(join.build()).queue();
-		
-		
-		
+
 	}
 
 }

@@ -1,0 +1,6 @@
+.gradle/*
+build/*
+application.cfg
+bin/*
+logs/*
+users
