@@ -33,9 +33,7 @@ dependencies {
     implementation group: 'club.minnced', name: 'discord-webhooks', version: '0.3.2'
     implementation group: 'org.codehaus.groovy', name: 'groovy-jsr223', version: '2.5.3'
     compile 'net.rom.lib:utils:0.0.1'
-    // Use JUnit test framework
-    testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
-    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+
 }
 
 jar {
@@ -51,19 +49,6 @@ jar {
         )
     }
 }
-
-task doBeforeTest {
-    doLast {
-      if (getBooleanProperty('skiptests')) {
-			test {
-    		useJUnitPlatform()
-    		systemProperty 'junit.jupiter.extensions.autodetection.enabled','true'
-			}
-		}
-    }
-}
-
-
 
 String getBuildNumber() {
 	def versionFile = file('version.properties')
@@ -99,5 +84,4 @@ boolean getBooleanProperty(final String property) {
 	}
 }
 
-test.dependsOn(doBeforeTest)
 build.finalizedBy incrementBuild // only increment on successful builds
