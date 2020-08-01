@@ -4,3 +4,5 @@ application.cfg
 bin/*
 logs/*
 users
+/.gradle/
+/build/

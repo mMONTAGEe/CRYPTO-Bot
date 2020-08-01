@@ -3,9 +3,9 @@ plugins {
     id 'application'
 }
 
-mainClassName = 'io.montage.bot.Bot'
-group = 'io.montage.bot'
-version = '1.1.0'
+mainClassName = "${mainclass}"
+group = "${group}"
+version = "${versionMajor}." + "${versionMinor}." + getBuildNumber()
 
 configurations {
     compile
@@ -52,8 +52,52 @@ jar {
     }
 }
 
-test {
-    useJUnitPlatform()
-    systemProperty 'junit.jupiter.extensions.autodetection.enabled','true'
-   
+task doBeforeTest {
+    doLast {
+      if (getBooleanProperty('skiptests')) {
+			test {
+    		useJUnitPlatform()
+    		systemProperty 'junit.jupiter.extensions.autodetection.enabled','true'
+			}
+		}
+    }
 }
+
+
+
+String getBuildNumber() {
+	def versionFile = file('version.properties')
+	if (versionFile.canRead()) {
+		Properties versionProps = new Properties()
+		versionProps.load(new FileInputStream(versionFile))
+		return versionProps['build_num'].toString()
+	}
+	return "1"
+}
+
+task incrementBuild {
+	doFirst {
+		def versionFile = file('version.properties')
+		if (versionFile.canRead()) {
+			Properties versionProps = new Properties()
+			versionProps.load(new FileInputStream(versionFile))
+			def num = versionProps['build_num'].toInteger() + 1
+			println("incrementing BuildNumber to: " + num)
+			versionProps['build_num'] = num.toString()
+			versionProps.store(versionFile.newWriter(), null)
+		} else {
+			println("version.properties file not found! Ignoring.")
+		}
+	}
+}
+
+boolean getBooleanProperty(final String property) {
+	if (project.hasProperty(property)) {
+		return ((String) project.findProperty(property)).toBoolean()
+	} else {
+		return false
+	}
+}
+
+test.dependsOn(doBeforeTest)
+build.finalizedBy incrementBuild // only increment on successful builds

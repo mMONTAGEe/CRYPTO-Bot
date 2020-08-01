@@ -11,23 +11,23 @@ public class Config {
 	public static String BOT_TOKEN = "";
 	
 	@COption
-	public static String BOT_COMMAND_PREFIX = "";
+	public static String BOT_COMMAND_PREFIX = "!";
 	
 	@COption
-	public static String WEBHOOK_URL = "";
+	public static String WEBHOOK_URL = "place-url-here";
 	
 	@COption
-	public static String PATTERN = "";
+	public static String PATTERN = "[%d{HH:mm:ss}] [%level] %logger{0}: %msg%n";
 	
 	@COption
 	public static boolean WEBOOK_CONSOLE = false;
 	
 	@COption
-	public static String BOT_GUILD_ID = "";
+	public static String BOT_GUILD_ID = "NOT-USED-YET";
 	
 	@COption
-	public static String JOIN_CHANNEL_ID = "";
+	public static String JOIN_CHANNEL_ID = "join-channel-id";
 	
 	@COption
-	public static String LEAVE_CHANNEL_ID = "";
+	public static String LEAVE_CHANNEL_ID = "leave-channel-id";
 }
