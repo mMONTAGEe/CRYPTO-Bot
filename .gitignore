@@ -6,3 +6,4 @@ logs/*
 users
 /.gradle/
 /build/
+!/run/**

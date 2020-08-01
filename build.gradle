@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'distribution'
 }
 
 mainClassName = "${mainclass}"
@@ -30,14 +31,14 @@ dependencies {
 	implementation group: 'commons-io', name: 'commons-io', version: '2.7'
 	compile 'org.slf4j:slf4j-api:1.7.25'
     compile 'ch.qos.logback:logback-classic:1.2.3'
-    implementation group: 'club.minnced', name: 'discord-webhooks', version: '0.3.2'
+    compile group: 'club.minnced', name: 'discord-webhooks', version: '0.3.2'
     implementation group: 'org.codehaus.groovy', name: 'groovy-jsr223', version: '2.5.3'
     compile 'net.rom.lib:utils:0.0.1'
 
 }
 
 jar {
-
+	archiveName = "Crypto-" + project.version + ".jar"
     configurations.compile.each { dep ->
         from(project.zipTree(dep)) {
             exclude 'META-INF', 'META-INF/**'
@@ -49,6 +50,21 @@ jar {
         )
     }
 }
+
+tasks.withType(Jar) {
+	destinationDir = file("$rootDir/run/$version")
+}
+
+task copyFiles{
+		copy{
+			from ("$rootDir"){
+				include 'run.bat'
+			}
+			into "$rootDir/run/$version"
+			expand 'version':project.version
+		}
+}
+
 
 String getBuildNumber() {
 	def versionFile = file('version.properties')
@@ -84,4 +100,4 @@ boolean getBooleanProperty(final String property) {
 	}
 }
 
-build.finalizedBy incrementBuild // only increment on successful builds
+build.finalizedBy (incrementBuild) // only increment on successful builds
