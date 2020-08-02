@@ -3,8 +3,7 @@
 * Java/JDA/Good friends
 
 ## General info
-That bot. it knows essential things. like who joins. who left. and latency between servers.
-i use my old laptop for my bots server
+The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. This bot knows essential things.  
 	
 ## Technologies
 Project is created with: Eclipse IDE 
