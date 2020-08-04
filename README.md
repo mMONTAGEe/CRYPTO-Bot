@@ -3,7 +3,7 @@
 * Java/JDA/Good friends
 
 ## General info
-The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. Operating in 2 servers xD 
+The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. Operating in 3 servers xD 
 	
 ## Technologies
 Project is created with: Eclipse IDE 
