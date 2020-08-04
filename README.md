@@ -1,9 +1,9 @@
 ## Table of contents
-* My Discord bot. 
+* CRYPTO Discord Bot. Kinda small but knows essential things
 * Java/JDA/Good friends
 
 ## General info
-The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. This bot knows essential things.  
+The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. Operating in 2 servers xD 
 	
 ## Technologies
 Project is created with: Eclipse IDE 
