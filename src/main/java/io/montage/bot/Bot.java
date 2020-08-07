@@ -16,10 +16,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import javax.annotation.Nullable;
 import javax.security.auth.login.LoginException;
 
-import org.apache.commons.io.FileUtils;
 import org.slf4j.LoggerFactory;
-
-import com.romvoid.config.ConfigBuilder;
 
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
@@ -43,6 +40,7 @@ import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
 import net.dv8tion.jda.internal.JDAImpl;
+import net.rom.BuildCfg;
 import net.rom.lib.async.threads.builder.ThreadBuilder;
 
 public class Bot {
@@ -59,12 +57,12 @@ public class Bot {
 	public Bot() throws Exception {
 		instance = this;
 		if (!file.exists()) {
-			new ConfigBuilder(Config.class, file).build(true);
+			new BuildCfg(Config.class, file).build(true);
 			System.out
 					.println("Created application.cfg file, please fill in file options as needed and re-run the bot");
 			System.exit(0);
 		}
-		new ConfigBuilder(Config.class, file).build(true);
+		new BuildCfg(Config.class, file).build(true);
 		setIntents();
 		commandManager = new CommandManager();
 		File file = new File("users/anchorfile");

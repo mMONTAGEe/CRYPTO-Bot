@@ -3,31 +3,31 @@
  */
 package io.montage.bot;
 
-import com.romvoid.config.COption;
+import net.rom.Cfg;
 
 public class Config {
 	
-	@COption
+	@Cfg
 	public static String BOT_TOKEN = "";
 	
-	@COption
+	@Cfg
 	public static String BOT_COMMAND_PREFIX = "!";
 	
-	@COption
+	@Cfg
 	public static String WEBHOOK_URL = "place-url-here";
 	
-	@COption
+	@Cfg
 	public static String PATTERN = "[%d{HH:mm:ss}] [%level] %logger{0}: %msg%n";
 	
-	@COption
+	@Cfg
 	public static boolean WEBOOK_CONSOLE = false;
 	
-	@COption
+	@Cfg
 	public static String BOT_GUILD_ID = "NOT-USED-YET";
 	
-	@COption
+	@Cfg
 	public static String JOIN_CHANNEL_ID = "join-channel-id";
 	
-	@COption
+	@Cfg
 	public static String LEAVE_CHANNEL_ID = "leave-channel-id";
 }
