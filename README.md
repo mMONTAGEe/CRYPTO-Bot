@@ -9,7 +9,7 @@ The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. Operating in 4 servers.
 Project is created with: Eclipse IDE 
 * Program used: Eclipse IDE (sometimes Intellij)
 * Coded to version: Java 8
-*A infinite thanks for ROMVoid95 (most of codes)  and (General Griveous) For support
+*A infinite thanks for ROMVoid95 (most of codes), (General Griveous) For support and (AgentX49) For something good.
 	
 ## Setup & Run
 
