@@ -20,7 +20,10 @@ git clone https://github.com/mMONTAGEe/MOMEK-bot.git
 	
 ##### Change to new directory
 ```bash
-cd /MOMEK-Bot
+Go to CMD
+Than cd  (Bot location)
+
+After do gradlew.build
 ```
 	
 ##### Run the build script batch file
