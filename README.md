@@ -1,4 +1,4 @@
- ![Crypto](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/src/main/resources/crypto.png)
+ ![Slogan](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/src/main/resources/slogan.png)
 
 
 ## Table of contents 📑
