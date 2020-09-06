@@ -32,7 +32,7 @@ Or simply use Fork button.
 ##### Change to new directory 📁
 ```bash
 Go to CMD
-Than cd  (Bot location)
+Then cd  (Bot location)
 
 After do gradlew.build
 ```
