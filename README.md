@@ -51,3 +51,7 @@ Save application.cfg with your filled out information
 then rerun run.bat
 
 ##### GG. You made it. you set up your first bot!  👏
+
+##### Idk. for any questions. ask me here 
+[For any questions Join here.!](https://discord.gg/fResd3V)
+I and ROM avaiable there.
