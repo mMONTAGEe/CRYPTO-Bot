@@ -47,4 +47,4 @@ run.bat
 Save application.cfg with your filled out information
 then rerun run.bat
 
-##### GG You amde it. yous et up your own bot! 
+##### GG. You made it. you set up your first bot!
