@@ -1,4 +1,4 @@
-![Crypto](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/src/main/resources/crypto.png)
+ ![Crypto](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/src/main/resources/crypto.png)
 
 
 ## Table of contents 📑
@@ -56,7 +56,7 @@ run.bat
 Save application.cfg with your filled out information
 then rerun run.bat
 
-## GG. You made it. you set up your first bot!  👏
+## 👏  GG. You made it. you set up your first bot!  👏
 
 ### For any questions ask me or ROM here, 
 * [For any questions Join here!](https://discord.gg/fResd3V)
