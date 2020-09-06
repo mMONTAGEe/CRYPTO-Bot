@@ -2,19 +2,23 @@
 
 
 ## Table of contents 📑
-* CRYPTO Discord Bot. Kinda small but knows essential things
-* Java/JDA/Good friends
+* CRYPTO Discord Bot. template to easily start making your Discord bots.
+* Made by --> Java/JDA/Eclipse IDE - Intellij IDEA/Good friends
 
 ## General info ✔
-The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. Operating in 4 servers.
+So basically. i want to help people.
+that was to make their discord bot. But dont know how to start.
+This is template. with basic stuff. To make start easier.
+(Do not contain database for multiserver operating).
+* Im always ready to help people.
 
-The Crypto Bot now officialy Became template for Future bot developments.
-	
+*Starting KIT included in this Repository*
+
+
 ## Technologies 💻
-Project is created with: Eclipse IDE 
-* Program used: Eclipse IDE (sometimes Intellij)
-* Coded to version: Java 8
-*A infinite thanks for ROMVoid95 (most of codes), (General Griveous) For support and (AgentX49) For something good.
+Coded in --> Eclipse IDE - Intellij IDEA
+* Java 8
+* JDA 
 	
 ## Setup & Run 🙌
 
@@ -52,9 +56,9 @@ run.bat
 Save application.cfg with your filled out information
 then rerun run.bat
 
-##### GG. You made it. you set up your first bot!  👏
+## GG. You made it. you set up your first bot!  👏
 
-##### Idk. for any questions. ask me here 
-[For any questions Join here.!](https://discord.gg/fResd3V)
+### For any questions ask me or ROM here, 
+* [For any questions Join here!](https://discord.gg/fResd3V)
 
-I and ROM available there.
+**I and ROM available there.**
