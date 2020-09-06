@@ -1,0 +1,16 @@
+* So basically Lets begin *
+
+1. Install the JAVA. Come on you need it.
+2. Intall the JAVA Development Kit (JDK).
+3. in your Java IDE. import the JDAs. (All of them).
+4. Start building your BOT!
+
+
+JDA Link - https://github.com/DV8FromTheWorld/JDA
+
+*** Guys that might help ***
+
+techtoolbox - https://www.youtube.com/watch?v=jGrD8AZfTig
+
+Kody Simpson - https://www.youtube.com/watch?v=NxOxcgbikJo
+
