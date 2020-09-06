@@ -1,0 +1,16 @@
+* So basically Lets begin *
+
+1. Install the JAVA file 
+2. Intell the JDK File.
+3. in your Java IDE. import the given JDAs. (All of them)
+4. Start building your BOT!
+
+
+***You can watch YouTube for more tutorials***
+
+Links -
+
+techtoolbox - https://www.youtube.com/watch?v=jGrD8AZfTig
+
+Kody Simpson - https://www.youtube.com/watch?v=NxOxcgbikJo
+
