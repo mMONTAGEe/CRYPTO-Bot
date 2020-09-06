@@ -12,7 +12,7 @@ This is template. with basic stuff. To make start easier.
 (Do not contain database for multiserver operating).
 * Im always ready to help people.
 
-[Starting KIT included in this Repository](https://github.com/mMONTAGEe/CRYPTO-Bot/tree/master/Getting%20Started)
+[How to setup your Workspace](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/GettingStarted.txt)
 
 
 ## Technologies 💻
