@@ -7,6 +7,8 @@
 
 ## General info ✔
 The CRYPTO Bot. Made by mMONTAGEe and ROMVoid95. Operating in 4 servers.
+
+The Crypto Bot now officialy Became template for future your bots.
 	
 ## Technologies 💻
 Project is created with: Eclipse IDE 
