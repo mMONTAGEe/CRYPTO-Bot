@@ -1,3 +1,6 @@
+![Crypto](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/src/main/resources/crypto.png)
+
+
 ## Table of contents
 * CRYPTO Discord Bot. Kinda small but knows essential things
 * Java/JDA/Good friends
