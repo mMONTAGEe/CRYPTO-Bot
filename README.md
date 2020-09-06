@@ -16,6 +16,8 @@ Project is created with: Eclipse IDE
 ##### Fork this repository
 ```bash
 git clone https://github.com/mMONTAGEe/MOMEK-bot.git
+
+Or simply use Fork button.
 ```
 	
 ##### Change to new directory
@@ -44,3 +46,5 @@ run.bat
 
 Save application.cfg with your filled out information
 then rerun run.bat
+
+##### GG You amde it. yous et up your own bot! 
