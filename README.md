@@ -54,4 +54,5 @@ then rerun run.bat
 
 ##### Idk. for any questions. ask me here 
 [For any questions Join here.!](https://discord.gg/fResd3V)
-I and ROM avaiable there.
+
+I and ROM available there.
