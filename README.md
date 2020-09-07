@@ -62,8 +62,8 @@ run.bat
 > ⚠ you must provide your own token for the bot
 ```
 
-Save application.cfg with your filled out information
-then rerun run.bat
+##### Save application.cfg with your filled out information
+##### then rerun run.bat
 
 
 
