@@ -70,7 +70,7 @@ then rerun run.bat
 
 
 
-```bash
+```python
  👏  GG. You made it. you set up your first bot!  👏
 
  For any questions ask me or ROM here, 
