@@ -58,7 +58,7 @@ then rerun run.bat
 
 
 
--------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -66,6 +66,7 @@ then rerun run.bat
 ## 👏  GG. You made it. you set up your first bot!  👏
 
 ### For any questions ask me or ROM here, 
+
 * [For any questions Join here!](https://discord.gg/fResd3V)
 
 **I and ROM available there.**
