@@ -2,23 +2,29 @@
 
 
 ## Table of contents 📑
+```kotlin
 * CRYPTO Discord Bot. template to easily start making your Discord bots.
 * Made by --> Java/JDA/Eclipse IDE - Intellij IDEA/Good friends
+```
 
 ## General info ✔
+```python
 So basically. i want to help people.
 People want to make Discord bot?. But dont know how to start.
 This template made to make Start easier. Containing basic commands, and stuff
 (Do not contain database for multiserver operating).
 * Im always ready to help people.
+```
 
 [How to setup your Workspace](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/GettingStarted.txt)
 
 
 ## Technologies 💻
+```java
 Coded in --> Eclipse IDE - Intellij IDEA
 * Java 8
 * JDA 
+```
 	
 ## Setup & Run 🙌
 
