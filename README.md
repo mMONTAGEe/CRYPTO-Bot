@@ -51,7 +51,9 @@ run.bat
 ```
 
 ##### open application.cfg and fill out the config information 📑✔
+```bash
 > ⚠ you must provide your own token for the bot
+```
 
 Save application.cfg with your filled out information
 then rerun run.bat
