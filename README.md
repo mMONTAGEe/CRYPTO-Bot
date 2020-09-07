@@ -10,7 +10,7 @@
 ## General info ✔
 ```python
 So basically. i want to help people.
-People want to make Discord bot?. But dont know how to start.
+People want to make Discord bot. But dont know how to start.
 This template made to make Start easier. Containing basic commands, and stuff
 (Do not contain database for multiserver operating).
 * Im always ready to help people.
