@@ -15,7 +15,7 @@ configurations {
 repositories {
     jcenter()
     maven { url 'https://jitpack.io' }
-    maven { url 'https://maven.romvoid.dev' }
+    maven { url 'https://maven.romvoid.dev/maven/' }
 }
 
 dependencies {
