@@ -53,8 +53,8 @@ build.bat
 > for this build we will use a example version of "1.0.0"
 
 ```bash
-cd /run/1.0.0
-run.bat
+locate the run.bat file
+and run it.
 ```
 
 ##### open application.cfg and fill out the config information 📑✔
