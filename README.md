@@ -13,7 +13,7 @@ So basically. i want to help people.
 People want to make Discord bot. But dont know how to start.
 This template made to make Start easier. Containing basic commands, and stuff
 (Do not contain database for multiserver operating).
-* Im always ready to help people.
+
 ```
 
 [How to setup your Workspace](https://github.com/mMONTAGEe/CRYPTO-Bot/blob/master/GettingStarted.txt)
