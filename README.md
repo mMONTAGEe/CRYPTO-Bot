@@ -4,6 +4,8 @@
 ## Table of contents 📑
 ```kotlin
 * CRYPTO Discord Bot. template to easily start making your Discord bots.
+* Say command to repeat the argument
+* Warmly welcomome or warmly goodbye the users in very first channel of the server.
 * Made by --> Java/JDA/Eclipse IDE - Intellij IDEA/Good friends
 ```
 
