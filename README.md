@@ -41,7 +41,7 @@ Coded in --> Eclipse IDE - Intellij IDEA
 
 ##### Fork this repository 🍴
 ```bash
-git clone https://github.com/mMONTAGEe/MOMEK-bot.git
+git clone https://github.com/mMONTAGEe/CRYPTO-Bot.git
 
 Or simply use Fork button.
 ```
