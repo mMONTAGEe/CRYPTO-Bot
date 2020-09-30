@@ -7,6 +7,7 @@ plugins {
 mainClassName = "${mainclass}"
 group = "${group}"
 version = "${versionMajor}." + "${versionMinor}." + getBuildNumber()
+def development = true;
 
 configurations {
     compile
@@ -34,7 +35,7 @@ dependencies {
     compile group: 'club.minnced', name: 'discord-webhooks', version: '0.3.2'
     implementation group: 'org.codehaus.groovy', name: 'groovy-jsr223', version: '2.5.3'
     compile 'net.rom.lib:utils:0.0.1'
-
+	compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
 }
 
 jar {
@@ -57,8 +58,9 @@ tasks.withType(Jar) {
 
 task copyFiles{
 		copy{
-			from ("$rootDir"){
+			from ("$rootDir/ProjectScripts"){
 				include 'run.bat'
+				include 'run'
 			}
 			into "$rootDir/run/$version"
 			expand 'version':project.version
@@ -77,17 +79,19 @@ String getBuildNumber() {
 }
 
 task incrementBuild {
-	doFirst {
-		def versionFile = file('version.properties')
-		if (versionFile.canRead()) {
-			Properties versionProps = new Properties()
-			versionProps.load(new FileInputStream(versionFile))
-			def num = versionProps['build_num'].toInteger() + 1
-			println("incrementing BuildNumber to: " + num)
-			versionProps['build_num'] = num.toString()
-			versionProps.store(versionFile.newWriter(), null)
-		} else {
-			println("version.properties file not found! Ignoring.")
+	if(!development) {
+		doFirst {
+			def versionFile = file('version.properties')
+			if (versionFile.canRead()) {
+				Properties versionProps = new Properties()
+				versionProps.load(new FileInputStream(versionFile))
+				def num = versionProps['build_num'].toInteger() + 1
+				println("incrementing BuildNumber to: " + num)
+				versionProps['build_num'] = num.toString()
+				versionProps.store(versionFile.newWriter(), null)
+			} else {
+				println("version.properties file not found! Ignoring.")
+			}
 		}
 	}
 }
@@ -100,4 +104,6 @@ boolean getBooleanProperty(final String property) {
 	}
 }
 
-build.finalizedBy (incrementBuild) // only increment on successful builds
+if (!development) {
+	build.finalizedBy (incrementBuild) // only increment on successful builds
+}

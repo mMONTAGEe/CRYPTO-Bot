@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.collections4.map.HashedMap;
 
-import io.montage.bot.Bot;
+import io.montage.bot.Crypto;
 import io.montage.bot.commands.inerf.Command;
 import io.montage.bot.utilities.EmbedUtil;
 import net.dv8tion.jda.api.JDA;
@@ -25,12 +25,12 @@ public class ActivityCommand extends Command {
 	}
 
 	@Override
-	public void executeAndHandle (GuildMessageReceivedEvent event, List<String> params, User author, Message inputMessage) {
+	public void executeAndHandle (GuildMessageReceivedEvent event, List<String> params) {
 		if (params.isEmpty()) {
 			this.getHelpMessage(event);
 			return;
 		}
-		JDA                  bot  = Bot.getJDA();
+		JDA                  bot  = Crypto.getJDA();
 		String               type = params.get(0);
 		Map<String, Integer> m    = new HashedMap<>();
 		m.put("default", 0);

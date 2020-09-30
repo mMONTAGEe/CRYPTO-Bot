@@ -17,7 +17,7 @@ public class SayCommand extends Command{
 	}
 
 	@Override
-	public void executeAndHandle (GuildMessageReceivedEvent event, List<String> params, User author, Message inputMessage) {
+	public void executeAndHandle (GuildMessageReceivedEvent event, List<String> params) {
 		StringBuilder b = new StringBuilder();
 		User user = event.getAuthor();
 
