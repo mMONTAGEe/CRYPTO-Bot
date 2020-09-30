@@ -8,7 +8,7 @@ plugins {
 mainClassName = "${mainclass}"
 group = "${group}"
 version = "${versionMajor}." + "${versionMinor}." + getBuildNumber()
-def development = true;
+def development = false;
 
 configurations {
     compile
@@ -106,5 +106,5 @@ boolean getBooleanProperty(final String property) {
 
 shadowJar.finalizedBy (copyFiles)
 if (!development) {
-	build.finalizedBy (incrementBuild) // only increment on successful builds
+	shadowJar.finalizedBy (incrementBuild) // only increment on successful builds
 }
