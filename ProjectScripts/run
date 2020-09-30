@@ -5,4 +5,4 @@ echo "###############################"
 echo "##       Running Crypto      ##"
 echo "###############################"
 
-/bin/java -Xmx128M -jar Crypto-${version}.jar
+/bin/java -Xmx128M -jar CryptoBot-${version}.jar

@@ -38,3 +38,5 @@ bin
 res/button_bot-invite.png
 config.json
 /build/
+run/**/users
+run/**/log

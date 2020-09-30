@@ -17,7 +17,7 @@ public class GuildListeners extends ListenerAdapter {
 	public static String[]	join_messages = getMessagesFromURL(Config.JOIN_MSG_URL);
 	public static String[]	leave_messages = getMessagesFromURL(Config.LEAVE_MSG_URL);
 	private static boolean	disabled;
-
+	Random rand = new Random(); 
 	private Member	member;
 	private Guild	guild;
 
@@ -29,12 +29,16 @@ public class GuildListeners extends ListenerAdapter {
 			this.guild = event.getGuild();
 
 			FileUtil.handleXPDataFile(new File("users/" + event.getUser().getId()), false);
+			int number = rand.nextInt(join_messages.length);
+			String msg = formattedMessage(join_messages[number]);
+			System.out.println(msg);
 
 			EmbedBuilder join = new EmbedBuilder();
 			join.setColor(0x39fc03);
-			join.setDescription(formattedMessage(join_messages));
+			join.setDescription(msg);
 
 			TextChannel welcomeChannel = event.getGuild().getTextChannelById(Config.JOIN_CHANNEL_ID);
+			System.out.println(welcomeChannel.getName());
 			if ((welcomeChannel != null) && welcomeChannel.canTalk()) {
 				welcomeChannel.sendMessage(join.build()).queue();
 			}
@@ -50,23 +54,33 @@ public class GuildListeners extends ListenerAdapter {
 			this.guild = event.getGuild();
 
 			FileUtil.handleXPDataFile(new File("users/" + event.getUser().getId()), true);
+			int number = rand.nextInt(leave_messages.length);
+			String msg = formatLeaveMsg(leave_messages[number]);
+			System.out.println(msg);
 
 			EmbedBuilder leave = new EmbedBuilder();
 			leave.setColor(0xff0000);
-			leave.setDescription(formattedMessage(leave_messages));
+			leave.setDescription(msg);
 
 			TextChannel leaveChannel = event.getGuild().getTextChannelById(Config.LEAVE_CHANNEL_ID);
+			System.out.println(leaveChannel.getName());
 			if ((leaveChannel != null) && leaveChannel.canTalk()) {
 				leaveChannel.sendMessage(leave.build()).queue();
 			}
 		}
 	}
 
-	private String formattedMessage(String[] messages) {
-		String msg = messages[new Random().nextInt(messages.length)];
-		msg.replace("%m", this.member.getAsMention());
-		msg.replace("%s", this.guild.getName());
-		return msg;
+	private String formatLeaveMsg(String message) {
+		return message.replace("[member]", this.member.getEffectiveName());
+	}
+
+	private String formattedMessage(String message) {
+		message.replace("[member]", this.member.getAsMention());
+		if(message.contains("[server]")) {
+			message.replace("[server]", this.guild.getName());
+			return message;
+		}
+		return message;
 	}
 
 	private boolean isSet() {
@@ -99,6 +113,6 @@ public class GuildListeners extends ListenerAdapter {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		return Arrays.asList(list).toArray(new String[list.size()]);
+		return list.toArray(new String[list.size()]);
 	}
 }
