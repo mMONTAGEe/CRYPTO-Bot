@@ -1,33 +1,19 @@
 package io.montage.bot.commands.inerf;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.lang3.StringUtils;
 
 import io.montage.bot.utilities.EmbedUtil;
 import net.dv8tion.jda.api.MessageBuilder;
-import net.dv8tion.jda.api.entities.Message;
-import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
 
-/**
- * The Class Command.
- */
 public abstract class Command {
 
-	/** The command name. */
-	protected String name;
-
-	/** The commands parameters. */
-	protected List<String> parameters;
-
-	/** The commands aliases. */
-	protected Set<String> aliases;
+	protected String		name;
+	protected List<String>	parameters;
+	protected List<String>	aliases;
 
 	/**
 	 * Instantiates a new command.
@@ -35,9 +21,9 @@ public abstract class Command {
 	 * @param name the name
 	 */
 	public Command(String name) {
-		this.name       = name;
-		this.parameters = new ArrayList<>(3);
-		this.aliases    = new HashSet<>();
+		this.name = name;
+		this.parameters = new ArrayList<>();
+		this.aliases = new ArrayList<>();
 	}
 
 	/**
@@ -46,14 +32,17 @@ public abstract class Command {
 	 * @param alias the alias
 	 * @return the command
 	 */
-	public Command addAlias (String alias) {
-		aliases.add(alias);
+	public Command addAlias(String... alias) {
+		for (String string : alias) {
+			aliases.add(string);
+		}
 		return this;
 	}
 
-	public Command params (String... params) {
-		for (String string : params)
+	public Command params(String... params) {
+		for (String string : params) {
 			parameters.add(string);
+		}
 		return this;
 	}
 
@@ -64,14 +53,14 @@ public abstract class Command {
 	 * @param inputMessage the incoming message object
 	 * @return the message to output or an empty string for nothing
 	 */
-	public abstract void executeAndHandle (GuildMessageReceivedEvent event, List<String> params, User author, Message inputMessage);
+	public abstract void executeAndHandle(GuildMessageReceivedEvent event, List<String> params);
 
 	/**
 	 * Gets the name.
 	 *
 	 * @return {@link #name}
 	 */
-	public String getName () {
+	public String getName() {
 		return name;
 	}
 
@@ -80,14 +69,14 @@ public abstract class Command {
 	 *
 	 * @return the description
 	 */
-	public abstract String getDescription ();
+	public abstract String getDescription();
 
 	/**
 	 * Gets the parameters.
 	 *
 	 * @return {@link #parameters}
 	 */
-	public List<String> getParameters () {
+	public List<String> getParameters() {
 		return Collections.unmodifiableList(parameters);
 	}
 
@@ -96,13 +85,12 @@ public abstract class Command {
 	 *
 	 * @return {@link #aliases}
 	 */
-	public Set<String> getAliases () {
-		return Collections.unmodifiableSet(aliases);
+	public List<String> getAliases() {
+		return Collections.unmodifiableList(aliases);
 	}
 
-	public void getHelpMessage (GuildMessageReceivedEvent event) {
-		EmbedUtil.sendAndDeleteOnGuilds(event.getChannel(), new MessageBuilder("Must Supply Correct Parameters \n\n "
-				+ "`" + this.name + " " + StringUtils.join(getParameters(), " ") + "`").build(), 15, TimeUnit.SECONDS);
+	public void getHelpMessage(GuildMessageReceivedEvent event) {
+		EmbedUtil.sendAndDeleteOnGuilds(event.getChannel(), new MessageBuilder("Must Supply Correct Parameters \n\n " + "`" + this.name + " " + StringUtils.join(getParameters(), " ") + "`").build(), 15, TimeUnit.SECONDS);
 		event.getMessage().delete().queue();
 	}
 }

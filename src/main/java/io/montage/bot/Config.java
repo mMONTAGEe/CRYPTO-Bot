@@ -6,28 +6,40 @@ package io.montage.bot;
 import net.rom.Cfg;
 
 public class Config {
-	
+
 	@Cfg
-	public static String BOT_TOKEN = "";
-	
+	public static String BOT_TOKEN = "<TOKEN>";
+
 	@Cfg
 	public static String BOT_COMMAND_PREFIX = "!";
-	
+
 	@Cfg
-	public static String WEBHOOK_URL = "place-url-here";
-	
+	public static String WEBHOOK_URL = "<URL>";
+
 	@Cfg
 	public static String PATTERN = "[%d{HH:mm:ss}] [%level] %logger{0}: %msg%n";
-	
+
 	@Cfg
 	public static boolean WEBOOK_CONSOLE = false;
-	
+
 	@Cfg
-	public static String BOT_GUILD_ID = "NOT-USED-YET";
-	
+	public static long[] SUDOERS = {
+			393847930039173131L, // ROM
+			383236389916901377L  // mMONTAGEe
+	};
+
+	/**
+	 * 
+	 */
 	@Cfg
-	public static String JOIN_CHANNEL_ID = "join-channel-id";
-	
+	public static String JOIN_MSG_URL = "<URL>";
+
 	@Cfg
-	public static String LEAVE_CHANNEL_ID = "leave-channel-id";
+	public static String JOIN_CHANNEL_ID = "<CHANNEL-ID>";
+
+	@Cfg
+	public static String LEAVE_MSG_URL = "<URL>";
+
+	@Cfg
+	public static String LEAVE_CHANNEL_ID = "<CHANNEL-ID>";
 }

@@ -1,9 +1,42 @@
-.gradle/*
-build/*
-application.cfg
+# Log file
+*.log
+
+# IDE settings
+.classpath
+.project
+.vscode
+out/*
+target/*
 bin/*
-logs/*
-users
-/.gradle/
+.settings/*
+build/classes/*
+build/distributions/*
+build/generated/*
+build/tmp/*
+
+
+# theia settings
+.theia/
+**/.settings/org.eclipse.buildship.core.prefs
+
+# IntelliJ files
+**/*.iml
+**/.idea
+**/.gradle
+*.ipr
+*.iws
+**/out/
+
+# gradle
+!gradle/wrapper/*
+.gradle
+.settings
+bin
+
+# Ignore Mac DS_Store files
+**/.DS_Store
+res/button_bot-invite.png
+config.json
 /build/
-!/run/**
+run/**/users
+run/**/log
