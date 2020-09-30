@@ -1,9 +1,0 @@
-.gradle/*
-build/*
-application.cfg
-bin/*
-logs/*
-users
-/.gradle/
-/build/
-!/run/**
