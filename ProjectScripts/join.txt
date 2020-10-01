@@ -13,3 +13,12 @@ This is Guards. You are welcome here [member]
 [member] Have you brought pizza?
 [member] BRUH. Finally you are here!
 Respond fast! [member] are you a good person?
+HEY!. we glad to see you here! [member]
+Sooo [member]. Welcome to the server :D
+Kuchiosenojutsu. [member]
+Voila. [member] is here!
+Congrats. [member] is here
+(Insert a welcome here for [member])
+BOOM. [member] Welcome :)
+Hello there, [member] PS. please respond with General Kenobi. *cough*
+System.our.println("[member] joined the server")
